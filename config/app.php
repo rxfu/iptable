@@ -178,9 +178,10 @@ return [
 		App\Providers\RouteServiceProvider::class,
 
 		/**
-		 * Custom Service Providers...
+		 * Contribution Service Providers...
 		 */
 		Barryvdh\Debugbar\ServiceProvider::class,
+		Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
 	],
 
@@ -232,7 +233,7 @@ return [
 		'View'         => Illuminate\Support\Facades\View::class,
 
 		/**
-		 * Custome facades...
+		 * Contribution facades...
 		 */
 		'Debugbar'     => Barryvdh\Debugbar\Facade::class,
 
