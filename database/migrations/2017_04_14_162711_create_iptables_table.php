@@ -20,7 +20,7 @@ class CreateIptablesTable extends Migration {
 			$table->char('mac', 12);
 			$table->integer('order')->default(0);
 			$table->text('memo')->nullable();
-			$table->integer('user_id');
+			$table->unsignedInteger('user_id');
 			$table->timestamps();
 
 			$table->foreign('user_id')
