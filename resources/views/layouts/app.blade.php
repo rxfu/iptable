@@ -26,8 +26,14 @@
 </head>
 <body>
     <div id="app">
-
-        @yield('content')
+        <md-whiteframe>
+            <md-toolbar>
+                <h2 class="md-title" style="flex: 1">{{ config('setting.name', 'Laravel') }}</h2>
+                <md-button class="md-icon-button">
+                    <md-icon>more_vert</md-icon>
+                </md-button>
+            </md-toolbar>
+        </md-whiteframe>
     </div>
 <!--
     <div id="app">
@@ -91,7 +97,6 @@
     </div>
  -->
     <!-- Scripts -->
-    <script src="{{ asset('js/vue-material.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

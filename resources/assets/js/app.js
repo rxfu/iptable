@@ -15,7 +15,15 @@ require('./bootstrap');
 
 Vue.use(VueMaterial);
 
-Vue.component('example', require('./components/Example.vue'));
+Vue.material.registerTheme({
+	app: {
+		primary: 'blue'
+	}
+})
+
+Vue.material.setCurrentTheme('app');
+
+// Vue.component('example', require('./components/Example.vue'));
 
 const app = new Vue({
     el: '#app'
