@@ -14,6 +14,7 @@
     <title>{{ config('setting.name', 'Laravel') }}</title>
 
     <!-- Styles -->
+    <link href="{{ asset('css/vue-material.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
@@ -25,11 +26,16 @@
 </head>
 <body>
     <div id="app">
+
+        @yield('content')
+    </div>
+<!--
+    <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
-                    <!-- Collapsed Hamburger -->
+                    Collapsed Hamburger
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
                         <span class="icon-bar"></span>
@@ -37,21 +43,21 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                    <!-- Branding Image -->
+                    Branding Image
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
+                    Left Side Of Navbar
                     <ul class="nav navbar-nav">
                         &nbsp;
                     </ul>
 
-                    <!-- Right Side Of Navbar -->
+                    Right Side Of Navbar
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
+                        Authentication Links
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
@@ -83,8 +89,9 @@
 
         @yield('content')
     </div>
-
+ -->
     <!-- Scripts -->
+    <script src="{{ asset('js/vue-material.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
