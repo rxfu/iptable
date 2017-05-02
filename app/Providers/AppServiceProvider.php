@@ -25,18 +25,14 @@ class AppServiceProvider extends ServiceProvider {
 
 		View::composer('*', function ($view) {
 
-			$routes = [
-				[
-					'href' => route('login'),
-					'name' => '登录',
-				],
-				[
-					'href' => route('register'),
-					'name' => '注册',
-				],
-			];
+			$menu = config('setting.navbar');
+			array_walk_recursive($menu, function (&$item, $key) {
+				if ('url' == $key) {
+					$item = route($item);
+				}
+			});
 
-			$view->with('menu', json_encode($routes));
+			$view->with('menu', json_encode($menu));
 		});
 	}
 }

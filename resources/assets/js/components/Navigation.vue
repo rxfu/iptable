@@ -1,6 +1,6 @@
 <template>
 	<div>
-	    <md-button v-for="item in items" :key="item.href" :href="item.href">{{ item.name }}</md-button>
+	    <md-button v-for="(item, index) in items" :key="index" :href="item.url">{{ item.name }}</md-button>
 	</div>
 </template>
 
