@@ -1,39 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="{{ config('setting.author') }}">
-    <meta name="keywords" content="{{ config('setting.keywords') }}">
-    <meta name="description" content="{{ config('setting.description') }}">
+    @include('partials.head')
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('setting.name', 'Laravel') }}</title>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/vue-material.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-    <!-- Scripts -->
-    <script>
-        window.Laravel = {!! json_encode([
-            'csrfToken' => csrf_token(),
-        ]) !!};
-    </script>
+    <title>{{ $title or '首页' }} | {{ config('setting.name', 'Laravel') }}</title>
 </head>
 <body>
     <div id="app">
-        <md-whiteframe>
-            <md-toolbar>
-                <h2 class="md-title" style="flex: 1">{{ config('setting.name', 'Laravel') }}</h2>
-                <md-button class="md-icon-button">
-                    <md-icon>more_vert</md-icon>
-                </md-button>
-            </md-toolbar>
-        </md-whiteframe>
+        @include('partials.header')
     </div>
 <!--
     <div id="app">

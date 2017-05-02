@@ -24,6 +24,7 @@ Vue.material.registerTheme({
 Vue.material.setCurrentTheme('app');
 
 // Vue.component('example', require('./components/Example.vue'));
+Vue.component('navigation',require('./components/Navigation.vue'));
 
 const app = new Vue({
     el: '#app'
