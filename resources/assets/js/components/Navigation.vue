@@ -1,7 +1,9 @@
 <template>
-	<div>
-	    <md-button v-for="(item, index) in items" :key="index" :href="item.url">{{ item.name }}</md-button>
-	</div>
+	<nav>
+	    <md-button class="md-icon-button" v-for="(item, index) in items" :key="index" :href="item.url" :title="item.name">
+	    	<md-icon>{{ item.icon }}</md-icon>
+	    </md-button>
+	</nav>
 </template>
 
 <script>

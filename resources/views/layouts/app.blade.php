@@ -7,7 +7,9 @@
 </head>
 <body>
     <div id="app">
-        @include('partials.header')
+            @include('partials.header')
+
+            @include('partials.footer')
     </div>
 <!--
     <div id="app">
