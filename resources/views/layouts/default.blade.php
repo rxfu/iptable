@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
-    @include('partials.head')
+    @include('partials._head')
 
     <title>{{ $title or '首页' }} | {{ config('setting.name', 'Laravel') }}</title>
 </head>
 <body>
     <div id="app">
-            @include('partials.header')
+        <header>
+            @include('partials._header')
+        </header>
 
-            @include('partials.footer')
+        <main class="container">
+            @yield('page')
+        </main>
+
+        <footer>
+            @include('partials._footer')
+        </footer>
     </div>
+
+    @include('partials._foot')
 <!--
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
@@ -68,11 +78,7 @@
                 </div>
             </div>
         </nav>
-
-        @yield('content')
     </div>
  -->
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

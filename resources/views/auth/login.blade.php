@@ -1,6 +1,32 @@
-@extends('layouts.app')
+@extends('layouts.one_column')
 
 @section('content')
+    <md-card>
+        <md-card-header>
+            <header class="md-title">登录</header>
+        </md-card-header>
+
+        <form novalidate @submit.stop.prevent="submit">
+            <md-card-content>
+                <md-input-container>
+                    <md-icon>person</md-icon>
+                    <label>用户名</label>
+                    <md-input type="text" required></md-input>
+                </md-input-container>
+
+                <md-input-container md-has-password>
+                    <md-icon>security</md-icon>
+                    <label>密码</label>
+                    <md-input type="password" required></md-input>
+                </md-input-container>
+            </md-card-content>
+
+            <md-card-actions>
+                <md-button type="submit" class="md-primary">登录</md-button>
+            </md-card-actions>
+        </form>
+    </md-card>
+<!--
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -65,4 +91,5 @@
         </div>
     </div>
 </div>
+-->
 @endsection

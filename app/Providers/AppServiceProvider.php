@@ -25,14 +25,14 @@ class AppServiceProvider extends ServiceProvider {
 
 		View::composer('*', function ($view) {
 
-			$menu = config('setting.navbar');
-			array_walk_recursive($menu, function (&$item, $key) {
+			$items = config('setting.navbar');
+			array_walk_recursive($items, function (&$item, $key) {
 				if ('url' == $key) {
 					$item = route($item);
 				}
 			});
 
-			$view->with('menu', json_encode($menu));
+			$view->with('items', $items);
 		});
 	}
 }

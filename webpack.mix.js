@@ -1,4 +1,6 @@
-const { mix } = require('laravel-mix');
+const {
+	mix
+} = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,8 +14,10 @@ const { mix } = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css')
-   .copy('node_modules/vue-material/dist/vue-material.css', 'public/css');
+	.sass('resources/assets/sass/app.scss', 'public/css')
+	.copy('node_modules/bootstrap-material-design/dist/css', 'public/css')
+	.copy('node_modules/bootstrap-material-design/dist/js', 'public/js');
+// .copy('node_modules/vue-material/dist/vue-material.css', 'public/css');
 
 if (mix.config.inProduction) {
 	mix.version();
