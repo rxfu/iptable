@@ -858,6 +858,8 @@ var app = new Vue({
   el: '#app'
 });
 
+$.material.init();
+
 /***/ }),
 /* 10 */
 /***/ (function(module, exports) {

@@ -30,3 +30,5 @@ Vue.component('copyright', require('./components/Copyright.vue'));
 const app = new Vue({
 	el: '#app'
 });
+
+$.material.init();

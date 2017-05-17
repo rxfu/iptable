@@ -1,11 +1,9 @@
 @extends('layouts.default')
 
 @section('page')
-	<md-layout>
-		<md-layout></md-layout>
-		<md-layout md-flex-xsmall="100" md-flex-medium="33" md-align="center">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
 			@yield('content')
-		</md-layout>
-		<md-layout></md-layout>
-	</md-layout>
+        </div>
+    </div>
 @stop
