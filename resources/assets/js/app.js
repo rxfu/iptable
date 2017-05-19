@@ -24,8 +24,6 @@ Vue.material.setCurrentTheme('app');
 */
 
 // Vue.component('example', require('./components/Example.vue'));
-Vue.component('navigation', require('./components/Navigation.vue'));
-Vue.component('copyright', require('./components/Copyright.vue'));
 
 const app = new Vue({
 	el: '#app'
