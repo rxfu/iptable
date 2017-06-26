@@ -182,6 +182,7 @@ return [
 		 */
 		Barryvdh\Debugbar\ServiceProvider::class,
 		Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+		Maatwebsite\Excel\ExcelServiceProvider::class,
 		Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
 
 	],
@@ -237,6 +238,7 @@ return [
 		 * Contribution facades...
 		 */
 		'Debugbar'     => Barryvdh\Debugbar\Facade::class,
+		'Excel'        => Maatwebsite\Excel\Facades\Excel::class,
 
 	],
 
