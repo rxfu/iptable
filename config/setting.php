@@ -2,12 +2,12 @@
 
 return [
 	'author'      => 'Fu Rongxin',
-	'keywords'    => 'IP management,Laravel,Vue.js,Material Design',
+	'keywords'    => 'IP management, Laravel, Vue.js, Bootstrap, Material Design',
 	'description' => 'IP management based on Vue.js and Laravel',
 	'name'        => '广西师范大学图书馆IP管理系统',
 	'copyright'   => '广西师范大学图书馆',
-	'copylink'    => "http://www.library.gxnu.edu.cn",
-	'copyyear'    => date('Y'),
+	'link'        => "//www.library.gxnu.edu.cn",
+	'year'        => date('Y'),
 
 	'navbar'      => [
 		[

@@ -11,22 +11,11 @@ require('./bootstrap');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-/*
-Vue.use(VueMaterial);
 
-Vue.material.registerTheme({
-	app: {
-		primary: 'blue'
-	}
-})
+Vue.use(Vuetify);
 
-Vue.material.setCurrentTheme('app');
-*/
-
-// Vue.component('example', require('./components/Example.vue'));
+Vue.component('example', require('./components/Example.vue'));
 
 const app = new Vue({
 	el: '#app'
 });
-
-$.material.init();
