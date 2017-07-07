@@ -46,4 +46,5 @@ window.axios.defaults.headers.common = {
 //     key: 'your-pusher-key'
 // });
 
+window.VueRouter = require('vue-router');
 window.Vuetify = require('vuetify');
