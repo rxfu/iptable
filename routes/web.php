@@ -11,10 +11,8 @@
 |
  */
 
-Route::get('/', function () {
-	return redirect('/home');
-});
+Route::get('{path}', function () {
+	return view('app');
+})->where('path', '(.*)');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');

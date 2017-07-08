@@ -13,7 +13,7 @@
 
     @section('styles')
         <!-- Styles -->
-        <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset(mix('css/app.css')) }}" rel="stylesheet">
     @show
 
     <!-- Scripts -->
@@ -27,13 +27,28 @@
 </head>
 
 <body>
-    <div id="app"></div>
+    <div id="app">
+          <h1>Hello App!</h1>
+      <p>
+        <!-- use router-link component for navigation. -->
+        <!-- specify the link by passing the `to` prop. -->
+        <!-- `<router-link>` will be rendered as an `<a>` tag by default -->
+        <router-link to="/foo">Go to Foo</router-link>
+        <router-link to="/bar">Go to Bar</router-link>
+      </p>
+      <!-- route outlet -->
+      <!-- component matched by the route will render here -->
+      <router-view></router-view>
+    </div>
 
     @include('footer')
 
     @section('script')
         <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}"></script>
+        <script src="{{ asset(mix('js/app.js')) }}"></script>
+        <script type="text/javascript">
+            alert(window.location.pathname);
+        </script>
     @show
 </body>
 </html>
