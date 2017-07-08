@@ -21,6 +21,12 @@ Vue.use(Vuetify);
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('login', require('./layouts/App.vue'));
 
+const router = new VueRouter({
+	mode: 'history',
+	base: __dirname,
+	routes
+});
+
 const app = new Vue({
 	el: '#app',
 	data: {
